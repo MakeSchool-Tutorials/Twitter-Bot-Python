@@ -103,7 +103,7 @@ Some of the topics you'll definitely need to research are:
 * the system module (for accessing command-line arguments)
 * the random module (for generating random numbers)
 
-Where to go from here
+Where to Go From Here
 ==
 
 > [action]

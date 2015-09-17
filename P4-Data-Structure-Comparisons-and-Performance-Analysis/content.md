@@ -254,7 +254,7 @@ With that, our benchmarking practice proved our analysis theory! Experiment succ
 
 Now we just have to do the same thing for the other data structures...
 
-Where to go from here
+Where to Go From here
 ==
 Finished already? You've analyzed, benchmarked, and cleaned up your code? Ok great, here are some further investigations you can attempt:
 

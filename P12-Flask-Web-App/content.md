@@ -82,7 +82,7 @@ Some issues to be aware of:
 * Heroku prefers that you use the [Gunicorn HTTP server](http://gunicorn.org/)
 * But when you use Gunicorn locally, your Python errors will be "swallowed" (i.e. not displayed in the error page or server log). This [StackOverflow post](http://stackoverflow.com/questions/8950674/debugging-a-flask-app-running-in-gunicorn) covers the issue well, and how to ensure that you can still see errors in development.
 
-Where to go from Here
+Where to Go From Here
 ==
 All finished, with clean and readable code? No? Ok, go do that first. Then, make your web app look better and/or add more features.
 

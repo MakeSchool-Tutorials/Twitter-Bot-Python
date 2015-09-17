@@ -62,7 +62,7 @@ You could even invert the words and counts, like this:
 >
 These are just a few options. The hard part is writing a function to build a histogram, but if you know how to iterate over a list, how to append items to another data structure, and how to do basic math, you've got all the tools you need to solve this problem.
 
-Where to Go from Here
+Where to Go From Here
 ==
 Finished already? If you still have time left, make your code readable. Then optimize and experiment:
 * Benchmark and optimize! How can you make your program as performant as possible? If you optimize for reading and not for writing, how can you improve your program? Don't be afraid to try different data structures, and tweak those algorithms!

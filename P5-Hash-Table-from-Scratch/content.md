@@ -116,7 +116,7 @@ There are lots of other ways to structure it, and to truly implement a hash tabl
 
 <!-- Commented this out - these will be requirements, not suggestions -->
 <!--
-Where to go from here
+Where to Go From Here
 ==
 Finished already? Is your code clean, readable, and well tested? No? Ok, go do that first. Then, optimize and experiment!
 
