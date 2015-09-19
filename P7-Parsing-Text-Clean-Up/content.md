@@ -1,5 +1,5 @@
 ---
-title: Parsing Text: Clean Up
+title: Parsing Text and Clean Up
 slug: parsing-text-clean-up
 ---
 
