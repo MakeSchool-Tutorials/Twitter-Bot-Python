@@ -4,7 +4,7 @@ slug: lets-build-a-twitter-bot
 ---
 
 Let's build something fun and silly! :-) Let's make a Twitter bot that generates sentences that sound realistic, but not always sensible. Here's an example from the Ron Paul bot:
-What currency are your thoughts on abolishing America's income tax altogether and get others to look into our private communications.
+> What currency are your thoughts on abolishing America's income tax altogether and get others to look into our private communications.
 
 So how do we make this? Well, not all at once. We're gonna do it in parts, step-by-step. We'll start by making a simple Python script that can randomly generate words from a dictionary. We'll iteratively build until we have a full-fledged language model that can generate approximately grammatical sentences. To learn a basic grammar, we'll need to collect a set of documents and parse their text to learn relationships between words. Once we have trained a basic language model that we're satisfied with, we'll deploy it to a web server on Heroku using the Flask framework, and finally connect it to Twitter.
 
@@ -87,14 +87,13 @@ So, are you ready? Go code!
 
 <!-- html comment to break boxes -->
 
-> [info]
->
+
 *Wait! I don't know Python!*
->
+==
 No problem! Python is a friendly language with lots of great resources for those of us who are just getting started.
->
+
 One recommended site is the [official Python 3 Tutorial](https://docs.python.org/3/tutorial/), although you are welcome (and encouraged!) to use other resources to learn.
->
+
 Some of the topics you'll definitely need to research are:
 * variable assignment
 * function definitions
