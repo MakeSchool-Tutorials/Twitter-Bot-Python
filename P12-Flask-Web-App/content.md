@@ -14,6 +14,56 @@ If you're unfamiliar with Flask, that's great, you'll be able to pick it up quic
 
 The goal for this tutorial is to create a web app with an index or home route (`/`) that displays a freshly-generated quote with each page load. We'll develop this web application locally first, and then publish to Heroku later so that anyone on the web can see it.
 
+Environment Setup
+==
+
+Before we begin working on the project code, we need to do some work to set up a proper development environment.
+
+When programming, it is common to work on code that will be executed on other computers with their own _environments_ (different operating system, languages and libraries installed, etc.). To ensure that our code will run on other machines, it is important to be clear and explicit about the environmental requirements that our code has. These environmental requirements include things like (in the case of Python):
+
+* Which version of Python do our programs expect?
+* Which version of pip (the Python package manager) are we using?
+* What libraries and which versions of those libraries do our programs rely upon?
+
+In the world of Python, a commonly accepted solution to the problem of environment management is to use the [virtualenv](https://virtualenv.pypa.io/) tool. Virtualenv is "a tool to create isolated Python environments", meaning that if you use it correctly, you can be sure that you are using _only_ the dependencies specified, and nothing more.
+
+For our purposes, we'll be using `virtualenv` to ensure that we use Python 3 to execute our programs and that the packages we install with `pip` will be isolated from our larger development environments (i.e. the other programs and applications on our computer). What this means is that we'll be able to use the `python` command to run programs with only the interpreter we've specified, and all packages we install with `pip` will be installed into a local directory, not a global one.
+
+Use this tutorial to a virtual environment set up with `virtualenv`, though you can [read more about virtual environments in Python in this Python Guide](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
+
+To start, follow the [installation instructions](https://virtualenv.pypa.io/en/latest/installation.html) to get yourself a copy of the `virtualenv` program. To verify that you've installed correctly, run the command `$ which virtualenv` and you should see the path for the virtualenv executable.
+
+Once we have the `virtualenv` command installed, we will use it to create a new virtual environment in a subdirectory of our project called `venv`. However, we also want to make sure that we create a virtual environment using Python 3, not Python 2. So we'll use the `-p` flag of the `virtualenv` command to specify a Python interpreter to use.
+
+First, find out the file path to Python 3 by running this command:
+
+	$ which python3
+
+On my machine, this outputs `/usr/local/bin/python3`, but it might be different for you.
+
+Then, run the `virtualenv` command supplying the path to the Python 3 interpreter after with the `-p` flag, followed by the name of the virtual environment directory, in this case `venv`:
+
+	$ virtualenv -p /path/to/python3 venv
+
+You should see some nice logging output telling you what `virtualenv` is doing.
+
+There is still one more step before `virtualenv` is activated, i.e. before we are _actually_ using our virtual environment instead of our regular one. We need to activate it! Run this command to activate:
+
+	$ source venv/bin/activate
+
+Read up on the [activate script](https://virtualenv.pypa.io/en/latest/userguide.html#activate-script) to learn more about what it does, and try this experiment to prove that it worked:
+
+1. Open two separate command shells (if you're using Terminal.app on a Mac, just open two tabs in the same window).
+2. Navigate to your same project directory in both shells.
+3. In _one_ of the shells, run the command `$ source venv/bin/activate`.
+4. In _both_ shells, run the command `$ which python`.
+
+You should see two different outputs: in the shell where you ran the activate script, the output of `$ which python` should be the file path to the `python` executable in `./venv/bin/`, while in the other shell it should output the path to the global Python interpreter.
+
+With a `venv` installed and activated, you can rest assured that the Python interpreter you're using is the one that you've specified. In addition, when you install packages with `pip`, you'll be installing them into the `./venv` subdirectory, which means that other Python projects you have will not affect the packages for this one. Pretty neat!
+
+**A word of warning:** it's easy to forget to run `$ source venv/bin/activate` when starting a new shell. If you find yourself running into strange bugs, make sure that you're using the virtual environment by checking the output of `$ which python`.
+
 Local Development
 ==
 Let's get a local version of our web app running.
