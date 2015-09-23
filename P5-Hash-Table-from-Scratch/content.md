@@ -201,3 +201,45 @@ When inserting a value, our hash table will follow these steps:
 3. Append a new node to the linked list in the bucket
 
 So, it looks like we'll need to make a linked list data structure.
+
+## Make a Linked List
+
+Each bucket in our hash table should be a linked list so that we can gracefully handle collisions and still keep the performance benefits of storing values in buckets.
+
+So, what is a linked list? In its simplest form, a linked list is a group of nodes where each node contains both some data (the value to store) and a reference (or link) to the next node in the group.
+
+Data is added to a linked list by creating a new node and referencing it from the last node in the list. Removing a node is as simple as changing the reference from the previous node in the list so that it points to the next node in the list.
+
+We'll describe the desired behavior using a sample interface. Then it will be up to you to implement the linked list yourself.
+
+##Specifications
+Our linked list must implement the following features:
+
+- Linked list stores the first node as its **head**
+- Linked list will retrieve the last node as its **tail**
+- A linked list can **append** data
+- Can **find** a value from linked list
+- Can **delete** a value from linked list
+
+Here is an example interface:
+
+	mylist = LinkedList()
+
+	mylist.append('a')
+	mylist.append('b')
+	mylist.append('c')
+
+	mylist.head.data # => 'a'
+	mylist.tail().data # => 'c'
+	mylist.find(lambda data: data > 'b') # => 'c'
+	mylist.delete('a')
+	mylist.head.data  # => 'b'
+
+> [action]
+>
+Not too bad, right? Ok, go build a linked list and use it to make your hash table super awesome!
+
+Help! All this talk of links and nodes has got me feeling woozy.
+==
+
+<!-- TODO explain LL in more detail -->
