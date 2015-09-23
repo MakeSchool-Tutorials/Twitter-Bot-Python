@@ -10,7 +10,7 @@ Let's put it on the web.
 
 In this tutorial, we're going to use the [Flask](http://flask.pocoo.org/) micro-framework to make a small web application where the generated text can be displayed. Eventually, we'll even use this web application to connect with the Twitter API and tweet out the best generated quotes.
 
-If you're unfamiliar with Flask, that's great, you'll be able to pick it up quickly. There are [lots]()http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world [of](https://realpython.com/blog/python/flask-by-example-part-1-project-setup/) [resources](https://exploreflask.com/) to get you up and running quickly. For the purposes of this tutorial, you'll need to learn only the basics of Flask. If you want to learn more (to make your app even better), by all means go ahead and do so.
+If you're unfamiliar with Flask, that's great, you'll be able to pick it up quickly. There are [lots](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) [of](https://realpython.com/blog/python/flask-by-example-part-1-project-setup/) [resources](https://exploreflask.com/) to get you up and running quickly. For the purposes of this tutorial, you'll need to learn only the basics of Flask. If you want to learn more (to make your app even better), by all means go ahead and do so.
 
 The goal for this tutorial is to create a web app with an index or home route (`/`) that displays a freshly-generated quote with each page load. We'll develop this web application locally first, and then publish to Heroku later so that anyone on the web can see it.
 
