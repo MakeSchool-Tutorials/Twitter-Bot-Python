@@ -68,9 +68,9 @@ Local Development
 ==
 Let's get a local version of our web app running.
 
-The first step is to download and install the Flask library: [instructions](http://flask.pocoo.org/docs/0.10/installation/). Note: if you're using Python 3 (and we hope you are), you'll want to install with the `pip3` command, not the `pip` command.
+The first step is to download and install the Flask library: [instructions](http://flask.pocoo.org/docs/0.10/installation/).
 
-	$ pip3 install Flask
+	$ pip install Flask
 
 Next you want to create a new script file that will be responsible for starting your web server. By convention this file is called `app.py`, but you can call it `server.py` or whatever you like.
 
