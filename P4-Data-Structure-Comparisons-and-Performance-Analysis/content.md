@@ -156,10 +156,10 @@ When doing algorithm analysis, we need to look for are all of the individual com
 With that in mind, let's break up the `frequency()` function into its component computations and identify the Big-O complexity of each computation. Here's the function definition, with comments identifying the computations:
 
 	def frequency(word, hgram):
-	    index = find(word, hgram) 				 # 1. call the find() function; 2. assign variable
-	    if index:                 				 # 3. evaluate conditional
+	    index = find(word, hgram) 		   # 1. call the find() function; 2. assign variable
+	    if index:                 		   # 3. evaluate conditional
 	        word_count_pair = hgram[index] # 4. access list element; 5. assign variable
-	        return word_count_pair[1] 		 # 6. access list element
+	        return word_count_pair[1] 	   # 6. access list element
 	    else:
 	        return 0
 
