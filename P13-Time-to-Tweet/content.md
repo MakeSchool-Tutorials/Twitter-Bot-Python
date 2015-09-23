@@ -65,12 +65,14 @@ Create a file in the root directory of your project called `.env`. Then declare 
 	TWITTER_ACCESS_TOKEN=youraccesstokenhash
 	TWITTER_ACCESS_TOKEN_SECRET=youraccesstokensecrethash
 
-Then, in `twitter.py`, import the `dotenv` module (you'll need to install it with `pip3`, of course) and load your `.env` file:
+Then, in `twitter.py`, import the `dotenv` module (you'll need to install it with `pip`, of course) and load your `.env` file:
 
 	import dotenv
 	dotenv.load_dotenv('.env')
 
 After doing that, your `os.environ` dictionary should contain all of the variables defined in `.env`. Make sure that they do by calling `os.environ.get()` for each of the variable names.
+
+_Hint: if you are running into errors, are you sure that you installed the `dotenv` package to your virtual environment? Make sure that you have activated your virtual environment with `$ source venv/bin/activate` and that you see `dotenv` in the list of packages printed by `$ pip list`._
 
 Finally, to make sure that you don't ever commit `.env` to your version control repository, add it to your `.gitignore` file with the following command:
 
@@ -100,7 +102,7 @@ The next step is to send a request to the Twitter API. To do this, we'll be usin
 
 Start off by installing them both:
 
-	$ pip3 install requests requests_oauthlib
+	$ pip install requests requests_oauthlib
 
 Then, add the following code to `twitter.py` to create a new authorized session:
 
