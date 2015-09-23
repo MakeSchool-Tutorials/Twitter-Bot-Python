@@ -3,6 +3,9 @@ title: Hash Table from Scratch
 slug: hash-table-from-scratch
 ---
 
+A Quick & Dirty Hash Table
+==
+
 In Python, one of the collection types is the dictionary type, which allows you to map keys to values. This is a common and essential data structure with a wide range of purposes.
 
 For example, you might use a dictionary to store phone numbers:
@@ -52,6 +55,8 @@ Where `hash_table` is a variable pointing to your hash table data structure.
 ##Tools
 An essential tool for this problem is Python's built-in `hash()` function. Read up on the documentation and the Wikipedia entry for hash functions to understand how `hash()` works and why it is useful. Then play around with `hash()` in a REPL or with some experimental scripts.
 
+> [action]
+>
 Got it? Ok, go forth and build your hash tables!
 
 Help! How do I even begin to think about this?
@@ -123,3 +128,76 @@ Finished already? Is your code clean, readable, and well tested? No? Ok, go do t
 - Did you use a linked list data structure? If not, write an alternate implementation that uses linked lists and compare its performance to your original implementation.
 - Expand the interface for your hash table to match that of [Python's built in dictionary](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict). Your hash table should support all of the same features of a regular dictionary.
 -->
+
+A Good Hash Table
+==
+
+Ok, what have we done so far? Well, we've built an alternative to Python's built-in dictionary structure. But quite frankly, it's not very good. It's too basic and not nearly performant enough to be called a _real_ hash table.
+
+In this next stage, we're going to **refactor** our hash table (change the implementation, not the interface) so that it functions and performs more like a real, production-grade hash table.
+
+## Using Buckets to Store Values
+
+The first critical feature of a hash table is how elements are assigned to "buckets". If your original hash table implementation didn't use a limited number of buckets in your table and the `hash()` function to generate a hashed value from the key, and then find the remainder from dividing the hashed key by the number of buckets, and use _that_ number to pick which bucket to put the value in, then _it's not a real hash table_.
+
+That was a mouthful. Let's use a real example to walk through it in more detail. Say we want to store the value `22` at key `"age"` in our hash table called `student`. This hash table has 6 buckets (in Python, these can be items in a list object), which we can represent visually like this:
+
+   0   1   2   3   4   5
+	[ ] [ ] [ ] [ ] [ ] [ ]
+
+If we use Python's built-in `hash()` function to create a hash of the key (i.e. the string value `"age"`), it will give us back a number, like this:
+
+	hash("age")
+	# => 1453079729191098346
+
+Now that we have a numeric representation of the string `"age"`, we pick a bucket to put it in by finding the remainder of this number divided by the number of buckets:
+
+	1453079729191098346 % 6
+	# => 4
+
+This tells us to place our value in bucket `4`:
+
+	 0   1   2   3   4      5
+	[ ] [ ] [ ] [ ] [ 22 ] [ ]
+
+Because a [hash function](https://en.wikipedia.org/wiki/Hash_function) will always return the same, unique number for a given input (caveat: many hash functions use a random seed, so it will only return the same number when called within the same process), we can use this to quickly look up values later. If we want to find the value stored at key `"age"`, all we need to do is hash the key and run our modulo calculation and voilá! We know which bucket to retrieve it from.
+
+Compare this to searching for an item in a list or array, which requires that you walk through each item before returning the item.
+
+> [action]
+>
+Does your hash table already use `hash()` and `hash_num % num_buckets`? If so, great! If not, make sure that it does!
+
+## Handling Collisions
+
+There is one glaring problem with that previous example of a hash table. You may have already noticed it: what happens when the remainder of the hash key divided by the number of buckets is the same for two different keys? How do we store both values and ensure that they are still associated with the correct key?
+
+This is called a **collision** and any hash table worth its salt needs to handle them gracefully and efficiently.
+
+Let's illustrate the problem a bit more. Remeber our example `student` hash looks something like this, with the value `22` at bucket `4`, which we access by hashing the key `"age"`:
+
+   0   1   2   3   4  	5
+	[ ] [ ] [ ] [ ] [22] [ ]
+
+Say we wanted to add the value `"Amy"` for the key "name", but the remainder of `hash("name") % 6` is _also_ `4`. What do we do? Make a list of both values, like this?:
+
+   0   1   2   3   4     				 5
+	[ ] [ ] [ ] [ ] [[22, "Amy"]] [ ]
+
+No, that won't do. How do we know which value belongs to `"name"` and which to `"age"`?
+
+There are many ways to solve this problem, but in this tutorial we're going to tackle it by using a [linked list](https://en.wikipedia.org/wiki/Linked_list) to handle collision chaining. Each bucket of our hash table will be a linked list containing nodes that hold both the key and the value.
+
+This way, looking up a value for a key will follow these steps:
+
+1. Find the correct bucket for key using hash algorithm
+2. Walk through nodes in linked list until node with same key is found
+3. Return value of node
+
+When inserting a value, our hash table will follow these steps:
+
+1. Find the correct bucket for key using hash algorithm
+2. Create a new linked list node with both the key and value to be stored
+3. Append a new node to the linked list in the bucket
+
+So, it looks like we'll need to make a linked list data structure.
