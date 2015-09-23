@@ -18,17 +18,17 @@ We'll describe the desired behavior with a sample interface. Then, we'll go over
 ##Specifications
 Our hash table must implement the following features:
 
-* A key can be **set** to a value
-* Given a key, can **get** a value
-* Can **update** an existing key with a new value
-* Can return a list of all **keys**
-* Can return a list of all **values**
+- A key can be **set** to a value
+- Given a key, can **get** a value
+- Can **update** an existing key with a new value
+- Can return a list of all **keys**
+- Can return a list of all **values**
 
 ##Constraints
 
-* Your hash table must only use the list and tuple collection types (no dictionaries or sets)
-* Keys must be a string, a numeric type, or a tuple of strings and/or numbers
-* Reading from the table (getting a value for a given key) must have an O(log n) lookup time or better
+- Your hash table must only use the list and tuple collection types (no dictionaries or sets)
+- Keys must be a string, a numeric type, or a tuple of strings and/or numbers
+- Reading from the table (getting a value for a given key) must have an O(log n) lookup time or better
 
 Here is an example `HashTable` object that implements the specifications listed above. It stores the decimal digit that corresponds to its roman numeral.
 
@@ -120,6 +120,6 @@ Where to Go From Here
 ==
 Finished already? Is your code clean, readable, and well tested? No? Ok, go do that first. Then, optimize and experiment!
 
-* Did you use a linked list data structure? If not, write an alternate implementation that uses linked lists and compare its performance to your original implementation.
-* Expand the interface for your hash table to match that of [Python's built in dictionary](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict). Your hash table should support all of the same features of a regular dictionary.
+- Did you use a linked list data structure? If not, write an alternate implementation that uses linked lists and compare its performance to your original implementation.
+- Expand the interface for your hash table to match that of [Python's built in dictionary](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict). Your hash table should support all of the same features of a regular dictionary.
 -->

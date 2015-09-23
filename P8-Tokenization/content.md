@@ -35,10 +35,10 @@ One suggestion: start with a simpler pattern for tokens, and then gradually intr
 
 You will face many choices in how to design your tokenizer. Some things to be considerate of:
 
-* Which characters should be ignored completely? (e.g. underscores, dashes, brackets, $, %, •, etc.)
-* What counts as a single token?
-* How should capitalization be handled? Should the two tokens `'Tree'` and `'tree'` be normalized into the same token `'tree'`?
-* When should punctuation be included in the token? (e.g. `'etc.'`, `'Ms.'`, `'U.S.S.R.'`)
+- Which characters should be ignored completely? (e.g. underscores, dashes, brackets, $, %, •, etc.)
+- What counts as a single token?
+- How should capitalization be handled? Should the two tokens `'Tree'` and `'tree'` be normalized into the same token `'tree'`?
+- When should punctuation be included in the token? (e.g. `'etc.'`, `'Ms.'`, `'U.S.S.R.'`)
 
 A side note on capitalization: if you choose to normalize words by converting them to lowercase, be aware that you will likely get false positives with this technique, for example the two "turkey"'s in: "Turkey melts are delicious." and "Turkey spans two continents." The country should be tokenized with capitalization, i.e. `'Turkey'`, whereas the animal should be tokenized as lowercase `'turkey'` so that it is treated as the same token as any other instance of `'turkey'`.
 
@@ -115,5 +115,5 @@ Where to Go From Here
 ==
 Finished already? If you still have time left, make your code readable. Then consider doing more rigorous testing and making performance improvements:
 
-* Are you sure that your tokenizer is performing exactly as you want? Write tests to ensure that you are getting the results you've designed for, and then run your tests with controlled input data.
-* Come up with at least one other tokenization strategy and compare performance. Find ways to make your tokenizer as efficient as possible.
+- Are you sure that your tokenizer is performing exactly as you want? Write tests to ensure that you are getting the results you've designed for, and then run your tests with controlled input data.
+- Come up with at least one other tokenization strategy and compare performance. Find ways to make your tokenizer as efficient as possible.

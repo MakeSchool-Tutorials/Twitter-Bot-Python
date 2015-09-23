@@ -7,12 +7,12 @@ At this point in the project, it is a good idea to pause, step back, and take a 
 
 When approaching questions of application architecture, there are a lot of directions to choose from. To clarify thinking about how to structure the application, start with questions such as:
 
-* What are the key features of the application? Are these clearly separated into their own files, classes, and/or modules?
-* Are the names of files, modules, functions, and variables appropriate and accurate? Would a new programmer be able to understand the names without too much contextual knowledge?
-* Can files be used as [both modules and as scripts](https://docs.python.org/3/tutorial/modules.html#executing-modules-as-scripts)?
-* Do modules all depend on each other or can they be used independently?
-* What are the scopes of variables and are they appropriate for their use case? If there are global variables, why are they needed?
-* Are the functions small and clearly specified, with as few side effects as possible?
+- What are the key features of the application? Are these clearly separated into their own files, classes, and/or modules?
+- Are the names of files, modules, functions, and variables appropriate and accurate? Would a new programmer be able to understand the names without too much contextual knowledge?
+- Can files be used as [both modules and as scripts](https://docs.python.org/3/tutorial/modules.html#executing-modules-as-scripts)?
+- Do modules all depend on each other or can they be used independently?
+- What are the scopes of variables and are they appropriate for their use case? If there are global variables, why are they needed?
+- Are the functions small and clearly specified, with as few side effects as possible?
 
 These questions will guide you towards thinking about application architecture in a more nuanced way. If you find that your code can use improvement (and what code *couldn't* use improvement), refactor until you are happy with it.
 

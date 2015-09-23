@@ -9,9 +9,9 @@ For example, if the source text were the sentence `"one fish two fish red fish b
 
 In this tutorial, we'll be writing a program which, given a source body of text, can perform operations to answer questions such as:
 
-* What is the least/most frequent word(s)?
-* How many different words are used?
-* What is the average (mean/median/mode) frequency of words in the text?
+- What is the least/most frequent word(s)?
+- How many different words are used?
+- What is the average (mean/median/mode) frequency of words in the text?
 
 The structure to represent this kind of data is called a histogram, which really just means a count of things by category. In Python, you can represent a histogram in a variety of ways using the different data structures available. Part of the challenge of this tutorial is how to design and use these data structures to create a histogram.
 
@@ -21,9 +21,9 @@ So, the first thing you'll need to do is to find yourself a good body of source 
 
 Once you have your source, you are ready to write your program. Here are the specifications that your program must satisfy:
 
-* A `histogram()` function which takes a `source_text` argument (can be either a filename or the contents of the file as a string, your choice) and return a histogram data structure that stores each unique word along with the number of times the word appears in the source text.
-* A `unique_words()` function that takes a `histogram` argument and returns the total count of unique words in the `histogram`. For example, when given the histogram for [The Adventures of Sherlock Holmes](https://www.gutenberg.org/ebooks/1661), it returns the integer `8475`.
-* A `frequency()` function that takes a `word` and `histogram` argument and returns the number of times that `word` appears in a text. For example, when given the word `"mystery"` and the Holmes histogram, it will return the integer `20`.
+- A `histogram()` function which takes a `source_text` argument (can be either a filename or the contents of the file as a string, your choice) and return a histogram data structure that stores each unique word along with the number of times the word appears in the source text.
+- A `unique_words()` function that takes a `histogram` argument and returns the total count of unique words in the `histogram`. For example, when given the histogram for [The Adventures of Sherlock Holmes](https://www.gutenberg.org/ebooks/1661), it returns the integer `8475`.
+- A `frequency()` function that takes a `word` and `histogram` argument and returns the number of times that `word` appears in a text. For example, when given the word `"mystery"` and the Holmes histogram, it will return the integer `20`.
 
 > [action]
 >
@@ -65,9 +65,9 @@ These are just a few options. The hard part is writing a function to build a his
 Where to Go From Here
 ==
 Finished already? If you still have time left, make your code readable. Then optimize and experiment:
-* Benchmark and optimize! How can you make your program as performant as possible? If you optimize for reading and not for writing, how can you improve your program? Don't be afraid to try different data structures, and tweak those algorithms!
-* If you used a *dictionary* data structure in your program, rewrite it using only the *list* and *tuple* data structures. How fast can you make your read operations? (Hint: consider the benefits of sorting...)
-* Create an intermediate histogram file that can be easily read and converted to a histogram data structure in Python. It could just be a plain text file with words and counts separated by spaces, each on their own line, like this:
+- Benchmark and optimize! How can you make your program as performant as possible? If you optimize for reading and not for writing, how can you improve your program? Don't be afraid to try different data structures, and tweak those algorithms!
+- If you used a *dictionary* data structure in your program, rewrite it using only the *list* and *tuple* data structures. How fast can you make your read operations? (Hint: consider the benefits of sorting...)
+- Create an intermediate histogram file that can be easily read and converted to a histogram data structure in Python. It could just be a plain text file with words and counts separated by spaces, each on their own line, like this:
 
 
   brilliant 6

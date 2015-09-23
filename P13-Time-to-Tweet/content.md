@@ -11,9 +11,9 @@ There are a few steps involved to integrate with Twitter. For the purposes of th
 
 Ok, let's get set up. Start by completing the following steps:
 
-* Create a new Twitter account at [https://twitter.com/signup](https://twitter.com/signup)
-* Create a new Twitter application at [https://apps.twitter.com/](https://apps.twitter.com/)
-* Generate API tokens ([docs](https://dev.twitter.com/oauth/overview/application-owner-access-tokens))
+- Create a new Twitter account at [https://twitter.com/signup](https://twitter.com/signup)
+- Create a new Twitter application at [https://apps.twitter.com/](https://apps.twitter.com/)
+- Generate API tokens ([docs](https://dev.twitter.com/oauth/overview/application-owner-access-tokens))
 
 To send an authenticated request to the Twitter API, you need (at least) 5 things:
 
@@ -186,5 +186,5 @@ With that in place, we finally have a fully functional Twitter integration compl
 
 Stretch Goals
 ==
-* Seed sentences with a word (build backwards and forwards). Make this functionality available via a new Flask route
-* Make Twitter bots "listen" and respond to other bots when they tweet a certain keyword (or set of keywords). Use the same keyword to seed the response. (Make sure to time-limit this otherwise could create infinite feedback loop between bots and get them booted from the API)
+- Seed sentences with a word (build backwards and forwards). Make this functionality available via a new Flask route
+- Make Twitter bots "listen" and respond to other bots when they tweet a certain keyword (or set of keywords). Use the same keyword to seed the response. (Make sure to time-limit this otherwise could create infinite feedback loop between bots and get them booted from the API)

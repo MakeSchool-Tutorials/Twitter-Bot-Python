@@ -20,11 +20,11 @@ When you completed the word frequency tutorial, you likely picked a single data 
 
 Here are your tasks for the tutorial:
 
-* Pick 3 data structures from the list below and implement a histogram program for each.
-* For each data structure, write a `histogram()` function that takes a list of words and returns a histogram of the corresponding data structure.
-* For each data structure, write a `frequency()` function that takes a word and a histogram structure and returns the frequency count for that word.
-* Analyze the algorithms for each`frequency()` function and identify their Big-O complexity.
-* Benchmark each `frequency()` function to find the execution time of a search operation with two histogram sizes (100 and 10000 unique words)
+- Pick 3 data structures from the list below and implement a histogram program for each.
+- For each data structure, write a `histogram()` function that takes a list of words and returns a histogram of the corresponding data structure.
+- For each data structure, write a `frequency()` function that takes a word and a histogram structure and returns the frequency count for that word.
+- Analyze the algorithms for each`frequency()` function and identify their Big-O complexity.
+- Benchmark each `frequency()` function to find the execution time of a search operation with two histogram sizes (100 and 10000 unique words)
 
 > [info]
 >
@@ -258,5 +258,5 @@ Where to Go From here
 ==
 Finished already? You've analyzed, benchmarked, and cleaned up your code? Ok great, here are some further investigations you can attempt:
 
-* Write functions to insert, update, and delete items in the histogram and analyze/benchmark them.
-* Restructure your histogram implementations as classes with their own methods for searching, inserting, updating, and deleting.
+- Write functions to insert, update, and delete items in the histogram and analyze/benchmark them.
+- Restructure your histogram implementations as classes with their own methods for searching, inserting, updating, and deleting.

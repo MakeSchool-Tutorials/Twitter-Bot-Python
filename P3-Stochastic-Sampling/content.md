@@ -80,7 +80,7 @@ Where to Go From Here
 ==
 Finished already? If you still have time left, make your code readable. Then optimize and experiment:
 
-* Optimize for speed of sampling (read time)
-* Optimize for memory (use the least amount of space)
-* Solve with only lists and tuples (no dictionaries)
-* Combine other weighting techniques besides on top of the frequency weighting (e.g. weight words that begin with a vowel more than others)
+- Optimize for speed of sampling (read time)
+- Optimize for memory (use the least amount of space)
+- Solve with only lists and tuples (no dictionaries)
+- Combine other weighting techniques besides on top of the frequency weighting (e.g. weight words that begin with a vowel more than others)

@@ -25,9 +25,9 @@ Your job is to write a parser that will clean up your corpus text, converting it
 
 Exactly *how* you clean up your corpus is up to you. Some steps you may want to consider:
 
-* Removing unwanted punctuation (e.g. _ or * characters around words)
-* Converting HTML character codes to their ASCII equivalent (e.g. &#8212; to —)
-* Normalizing punctuation (e.g. convert both types of quotes – "" and “” – to regular quotes "")
+- Removing unwanted punctuation (e.g. _ or * characters around words)
+- Converting HTML character codes to their ASCII equivalent (e.g. &#8212; to —)
+- Normalizing punctuation (e.g. convert both types of quotes – "" and “” – to regular quotes "")
 
 One important piece to keep in mind, however, is that as you keep developing this project you will likely notice certain things that should have been cleaned up but that you missed earlier. For example, maybe your corpus includes a few occurrences of the § (section) character.
 
@@ -47,21 +47,21 @@ Start by picking a sentence that has at least one character you want to remove, 
 
 Some strategies for approaching this (which you are welcome to expand upon or come up with your own):
 
-* Iterate through each character of the source text, and append it to a list of "clean" characters *unless* it is a character to be removed (you can use [list membership operations](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations) to do this). After iterating through all of the characters, return the joined list of "clean" characters.
-* Iterate a list of characters to remove, check if they are found in the source text, and if so delete them. Do the same for characters (or character sequences) to replace, except don't remove them, but, you know, *replace* them.
+- Iterate through each character of the source text, and append it to a list of "clean" characters *unless* it is a character to be removed (you can use [list membership operations](https://docs.python.org/3/library/stdtypes.html#common-sequence-operations) to do this). After iterating through all of the characters, return the joined list of "clean" characters.
+- Iterate a list of characters to remove, check if they are found in the source text, and if so delete them. Do the same for characters (or character sequences) to replace, except don't remove them, but, you know, *replace* them.
 
 Some tools you may find useful (by no means an exhaustive list, just a starting point):
 
-* [str.find()](https://docs.python.org/3/library/stdtypes.html#str.find), [str.split()](https://docs.python.org/3/library/stdtypes.html#str.split), [str.replace()](https://docs.python.org/3/library/stdtypes.html#str.replace)
-* [regular expression (re) library](https://docs.python.org/3/library/re.html)
-* [html library](https://docs.python.org/3/library/html.html)
+- [str.find()](https://docs.python.org/3/library/stdtypes.html#str.find), [str.split()](https://docs.python.org/3/library/stdtypes.html#str.split), [str.replace()](https://docs.python.org/3/library/stdtypes.html#str.replace)
+- [regular expression (re) library](https://docs.python.org/3/library/re.html)
+- [html library](https://docs.python.org/3/library/html.html)
 
 Where to Go From Here
 ==
 Finished already? If you still have time left, make your code readable. Then improve design and performance:
 
-* Is your parser as fast as it could be? What is the difference between using regular expressions and character-by-character iteration?
-* Modify your parser so that it can be used as both a module (imported by another script) and as a stand-alone, executable script that, when invoked from the command line with a file argument, will print out the cleaned-up version, e.g.:
+- Is your parser as fast as it could be? What is the difference between using regular expressions and character-by-character iteration?
+- Modify your parser so that it can be used as both a module (imported by another script) and as a stand-alone, executable script that, when invoked from the command line with a file argument, will print out the cleaned-up version, e.g.:
 
 	$ cat source.txt
 	We _really_ love parsing &#38; tokenization.
