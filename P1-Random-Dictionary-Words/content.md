@@ -8,6 +8,7 @@ Let's take a step back and remember what our ultimate goal is in this project: t
 We'll practice generating sentences from a body of text in a text file. The algorithm design is fairly straight-forward: read in a text file, select a random set of words from the file, and put those words together into a "sentence".
 
 Here's some of the things that we're not going to do in this section:
+
 - The sentences do not have to make grammatical sense
 - The word order does not matter
 - Word selection can be completely random
@@ -65,6 +66,7 @@ Where to Go From Here
 > [action]
 >
 Finished already? If you still have time left, take your program further or explore other ideas, for example:
+
 - Make it fast! Can you optimize this program to generate sentences more quickly? Make sure to benchmark your script before and after optimizations.
 - Write your own vocabulary study game: flash a word, player has to guess the definition, then is shown the definition.
 - Build an autocomplete program: given the first characters of a word, print a list of all possible words to spell from that base.

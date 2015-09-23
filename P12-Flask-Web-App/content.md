@@ -77,6 +77,7 @@ That's fine, no problem. Stay calm, read the error message, and [check your Hero
 Google error messages. Ask for help. We're going to get through this.
 
 Some issues to be aware of:
+
 - Heroku expects you to use [virtualenv](https://virtualenv.pypa.io/en/latest/) to manage dependencies with virtual environments
 - Heroku expects you to use [foreman](http://ddollar.github.io/foreman/) to start your app (it should be installed automatically with the Heroku Toolbelt)
 - Heroku prefers that you use the [Gunicorn HTTP server](http://gunicorn.org/)

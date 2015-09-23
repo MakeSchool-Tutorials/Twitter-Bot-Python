@@ -65,6 +65,7 @@ These are just a few options. The hard part is writing a function to build a his
 Where to Go From Here
 ==
 Finished already? If you still have time left, make your code readable. Then optimize and experiment:
+
 - Benchmark and optimize! How can you make your program as performant as possible? If you optimize for reading and not for writing, how can you improve your program? Don't be afraid to try different data structures, and tweak those algorithms!
 - If you used a *dictionary* data structure in your program, rewrite it using only the *list* and *tuple* data structures. How fast can you make your read operations? (Hint: consider the benefits of sorting...)
 - Create an intermediate histogram file that can be easily read and converted to a histogram data structure in Python. It could just be a plain text file with words and counts separated by spaces, each on their own line, like this:
