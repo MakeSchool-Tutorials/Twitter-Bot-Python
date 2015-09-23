@@ -99,6 +99,7 @@ No problem! Python is a friendly language with lots of great resources for those
 One recommended site is the [official Python 3 Tutorial](https://docs.python.org/3/tutorial/), although you are welcome (and encouraged!) to use other resources to learn.
 
 Some of the topics you'll definitely need to research are:
+
 * variable assignment
 * function definitions
 * core data types: strings, integers, floats
@@ -112,6 +113,7 @@ Where to Go From Here
 > [action]
 >
 Finished already? If you still have time left, you can keep building off of this idea or try writing other programs that work with words, for example:
+
 * String reversals: reverse words, sentences
 * An interactive "mad libs" script
 * Anagram generator
