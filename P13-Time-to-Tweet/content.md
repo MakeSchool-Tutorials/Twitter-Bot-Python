@@ -72,6 +72,8 @@ Then, in `twitter.py`, import the `dotenv` module (you'll need to install it wit
 
 After doing that, your `os.environ` dictionary should contain all of the variables defined in `.env`. Make sure that they do by calling `os.environ.get()` for each of the variable names.
 
+_Hint: if you are running into errors, are you sure that you installed the `dotenv` package to your virtual environment? Make sure that you have activated your virtual environment with `$ source venv/bin/activate` and that you see `dotenv` in the list of packages printed by `$ pip list`._
+
 Finally, to make sure that you don't ever commit `.env` to your version control repository, add it to your `.gitignore` file with the following command:
 
 	$ echo ".env" >> .gitignore
