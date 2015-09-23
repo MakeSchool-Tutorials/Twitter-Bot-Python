@@ -114,7 +114,7 @@ There are lots of other ways to structure it, and to truly implement a hash tabl
 <!-- DH - Insert instructions on how to improve the hash table - those will involve a whole new section on how to create a linked list -->
 <!-- DH - Students must use the linked list they make to resolve collusions via chaining.
 
-<!-- Commented this out - these will be requirements, not suggestions -->
+<!-- Commented this section out because these will become requirements, not suggestions -->
 <!--
 Where to Go From Here
 ==
