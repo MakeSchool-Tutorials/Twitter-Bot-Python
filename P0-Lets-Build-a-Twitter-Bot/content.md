@@ -22,22 +22,21 @@ For example, here is a program that will return a random Monty Python quote -
 
 	import random
 
-	quotes = ( "It's just a flesh wound.",
-	           "He's not the Messiah. He's a very naughty boy!",
-	           "THIS IS AN EX-PARROT!!" )
+	quotes = ("It's just a flesh wound.",
+	          "He's not the Messiah. He's a very naughty boy!",
+	          "THIS IS AN EX-PARROT!!")
 
 	rand_index = random.randint(0, len(quotes) - 1)
 	print(quotes[rand_index])
 
 This code can only be run as a script because all lines are always executed, so importing this as a module into another program would make it print out a quote, even if we only want to access the `quotes` tuple. In Python, the common pattern for making files dual-purpose (modules as well as executables) is to use a conditional that will only run certain code if the current process file is the current source file, like this:
 
-`python_quote.py`
-
 	import random
 
-	quotes = ( "It's just a flesh wound.",
-	           "He's not the Messiah. He's a very naughty boy!",
-	           "THIS IS AN EX-PARROT!!" )
+	quotes = ("It's just a flesh wound.",
+	          "He's not the Messiah. He's a very naughty boy!",
+	          "THIS IS AN EX-PARROT!!")
+
 
 	def random_python_quote():
 	    rand_index = random.randint(0, len(quotes) - 1)
