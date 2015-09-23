@@ -46,13 +46,18 @@ This code can only be run as a script because all lines are always executed, so 
 	    quote = random_python_quote()
 	    print(quote)
 
+
 This script can be imported within another file in the same directory with `import python_quote`, which would give access to the `random_python_quote()` function, or it can be executed directly, like so:
 
-	$ py python_quote.py
+	$ python3 python_quote.py
 	It's just a flesh wound.
 
-	$ py python_quote.py
+	$ python3 python_quote.py
 	He's not the Messiah. He's a very naughty boy!
+
+> [info]
+>
+> When using `virtualenv`, both the `python` and `python3` commands are aliases to the actual python command, so you can use either.
 
 
 Rearrange Words
@@ -64,7 +69,7 @@ To start, we'll be building a script that randomly rearranges a set of words pro
 
 For example, if you run the following command (assuming your script name is *rearrange.py*, though you can use any name you like)
 
-	$ py rearrange.py how now brown cow
+	$ python3 rearrange.py how now brown cow
 
 You should see output like this:
 
@@ -72,10 +77,10 @@ You should see output like this:
 
 Of course, because it is random, repeated executions of the script with the same arguments will produce different results:
 
-	$ py rearrange.py how now brown cow
+	$ python3 rearrange.py how now brown cow
 	brown cow how now
 
-	$ py rearrange.py how now brown cow
+	$ python3 rearrange.py how now brown cow
 	now how cow brown
 
 That's it. You have all of the specs needed to produce a correct program.
