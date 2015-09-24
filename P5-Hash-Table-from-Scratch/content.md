@@ -174,7 +174,7 @@ There is one glaring problem with that previous example of a hash table. You may
 
 This is called a **collision** and any hash table worth its salt needs to handle them gracefully and efficiently.
 
-Let's illustrate the problem a bit more. Remeber our example `student` hash looks something like this, with the value `22` at bucket `4`, which we access by hashing the key `"age"`:
+Let's illustrate the problem a bit more. Remember our example `student` hash looks something like this, with the value `22` at bucket `4`, which we access by hashing the key `"age"`:
 
    0   1   2   3   4  	5
 	[ ] [ ] [ ] [ ] [22] [ ]
