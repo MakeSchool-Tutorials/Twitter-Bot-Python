@@ -59,8 +59,7 @@ An essential tool for this problem is Python's built-in `hash()` function. Read 
 >
 Got it? Ok, go forth and build your hash tables!
 
-Help! How do I even begin to think about this?
-==
+#### Help! How do I even begin to think about this?
 No problem. Let's backtrack to the purpose of a hash table.
 
 What makes hash tables so useful is that they allow us to store *values* (strings, numbers, collections, or any other object) by a *key* of our choosing, which decouples the order of the elements from our ability to insert or retrieve them.
@@ -113,21 +112,6 @@ With that, you could write a `get()` function that takes a key and this list, an
 This is the simplest possible way to structure this data, and it's not very elegant or efficient.
 
 There are lots of other ways to structure it, and to truly implement a hash table you'll need to make use of a *hash function* to make indices from keys. Read up on hash tables to learn more about how this works.
-
-<!-- DH - We tell them how to make a terrible hash table, but not a good one -->
-<!-- DH - We don't even talk about (hash % numbBuckets) as index into an array yet
-<!-- DH - Insert instructions on how to improve the hash table - those will involve a whole new section on how to create a linked list -->
-<!-- DH - Students must use the linked list they make to resolve collusions via chaining.
-
-<!-- Commented this section out because these will become requirements, not suggestions -->
-<!--
-Where to Go From Here
-==
-Finished already? Is your code clean, readable, and well tested? No? Ok, go do that first. Then, optimize and experiment!
-
-- Did you use a linked list data structure? If not, write an alternate implementation that uses linked lists and compare its performance to your original implementation.
-- Expand the interface for your hash table to match that of [Python's built in dictionary](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict). Your hash table should support all of the same features of a regular dictionary.
--->
 
 A Good Hash Table
 ==
@@ -240,8 +224,7 @@ Here is an example interface:
 >
 Not too bad, right? Ok, go build a linked list and use it to make your hash table super awesome!
 
-Help! All this talk of links and nodes has got me feeling woozy.
-==
+### Help! All this talk of links and nodes has got me feeling woozy.
 
 If it's your first time working with linked lists, it may seem confusing. Never fear, however, linked lists are actually quite simple. The terminology can be daunting at first, but once you build one for yourself you'll see how basic they actually are.
 
@@ -296,3 +279,7 @@ So that's pretty neat.
 If the image of a linked list isn't quite sticking, let's use an analogy. Whereas an array (or list in Python) is like a row of chairs in a theater, a linked list is like a train with cars (nodes) that have cargo (values) and are connected to each other by a coupling (reference/link). The front of the train is like the head of the list, and the back (the caboose) is like the tail of the list.
 
 The flexibility of a linked list makes it a powerful tool in many programming tasks. Have fun with it!
+
+Where to Go From Here
+==
+Finished already? Is your code clean, readable, and well tested? No? Ok, go do that first. Then, expand the interface for your hash table to match that of [Python's built in dictionary](https://docs.python.org/3/library/stdtypes.html#mapping-types-dict). Your hash table should support all of the same features of a regular dictionary.
