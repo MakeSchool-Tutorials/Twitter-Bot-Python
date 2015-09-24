@@ -126,7 +126,7 @@ The first critical feature of a hash table is how elements are assigned to "buck
 
 That was a mouthful. Let's use a real example to walk through it in more detail. Say we want to store the value `22` at key `"age"` in our hash table called `student`. This hash table has 6 buckets (in Python, these can be items in a list object), which we can represent visually like this:
 
-   0   1   2   3   4   5
+	0   1   2   3   4   5
 	[ ] [ ] [ ] [ ] [ ] [ ]
 
 If we use Python's built-in `hash()` function to create a hash of the key (i.e. the string value `"age"`), it will give us back a number, like this:
@@ -141,7 +141,7 @@ Now that we have a numeric representation of the string `"age"`, we pick a bucke
 
 This tells us to place our value in bucket `4`:
 
-	 0   1   2   3   4      5
+	0   1   2   3   4      5
 	[ ] [ ] [ ] [ ] [ 22 ] [ ]
 
 Because a [hash function](https://en.wikipedia.org/wiki/Hash_function) will always return the same, unique number for a given input (caveat: many hash functions use a random seed, so it will only return the same number when called within the same process), we can use this to quickly look up values later. If we want to find the value stored at key `"age"`, all we need to do is hash the key and run our modulo calculation and voilá! We know which bucket to retrieve it from.
@@ -160,12 +160,12 @@ This is called a **collision** and any hash table worth its salt needs to handle
 
 Let's illustrate the problem a bit more. Remember our example `student` hash looks something like this, with the value `22` at bucket `4`, which we access by hashing the key `"age"`:
 
-   0   1   2   3   4  	5
+	0   1   2   3   4    5
 	[ ] [ ] [ ] [ ] [22] [ ]
 
 Say we wanted to add the value `"Amy"` for the key "name", but the remainder of `hash("name") % 6` is _also_ `4`. What do we do? Make a list of both values, like this?:
 
-   0   1   2   3   4     				 5
+	0   1   2   3   4             5
 	[ ] [ ] [ ] [ ] [[22, "Amy"]] [ ]
 
 No, that won't do. How do we know which value belongs to `"name"` and which to `"age"`?
@@ -230,12 +230,12 @@ If it's your first time working with linked lists, it may seem confusing. Never 
 
 Let's start with the purpose of a linked list. Say you want to store a sequence of data, like a grocery list. Using an array (or list in Python) you would store each grocery item as an element of the list, like this:
 
-	 0				  1				 2			 3
+	0           1        2       3
 	["spinach", "beans", "rice", "oil"]
 
 Finding an element from a list is easy enough, the computer just has to iterate through each item until it finds the one you want. What about adding an item to the end of the list? Well, in that case the computer just creates a new element (allocates more memory) for the list at the end, at index 4:
 
-	 0				  1				 2			 3			4
+	0           1        2       3      4
 	["spinach", "beans", "rice", "oil", "guava"]
 
 Not too bad. But what if you wanted to insert an item at the _beginning_ of the list, at index 0? In that case, you'd have to create room at the end of the list and move _every single item after index 0_. It would take the computer more work to do this.
