@@ -216,7 +216,8 @@ We'll describe the desired behavior using a sample interface. Then it will be up
 Our linked list must implement the following features:
 
 - Linked list stores the first node as its **head**
-- Linked list will retrieve the last node as its **tail**
+- Linked list stores the last node as its **tail**
+- Nodes have a **data** property which can store arbitrary values
 - A linked list can **append** data
 - Can **find** a value from linked list
 - Can **delete** a value from linked list
@@ -230,7 +231,7 @@ Here is an example interface:
 	mylist.append('c')
 
 	mylist.head.data # => 'a'
-	mylist.tail().data # => 'c'
+	mylist.tail.data # => 'c'
 	mylist.find(lambda data: data > 'b') # => 'c'
 	mylist.delete('a')
 	mylist.head.data  # => 'b'
