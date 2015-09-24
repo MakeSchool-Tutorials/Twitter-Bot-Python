@@ -19,13 +19,42 @@ We'll be using *Classroom for GitHub* to manage assignments throughout the progr
 
 > [info]
 > 
-> Don't worry if you are not familiar with using Git and GitHub yet -- there will be an in-depth lecture soon. To clone the repository enter the following command into the *Terminal* app.
+> Don't worry if you are not familiar with using Git and GitHub yet -- there will be an in-depth lecture soon.
 > 
->       git clone {clone URL}
+> Before we go any further, you will need to create a GitHub account. Your GitHub account will function as a professional portfolio of your work so be sure to choose a professional username that you won't be embarrassed to put on your résumé!
+>
+> Go to [GitHub](https://github.com/join) and create an account with a professional username. Choose *Free* on step two.
+>
+> You can skip this step if you already have a GitHub account!
+
+<!-- Make School -->
+
+> [action]
 > 
-> You can find the clone URL on the right hand pane of the repository that was created for you. The complete command should look something like this:
+> Now, let's make sure that you have an SSH key set up with GitHub. Type the following command into the *Terminal* app:
 > 
->       git clone https://github.com/MakeSchool-17/twitter-bot-python-username.git
+>       ssh -T git@github.com
+> 
+> If it says something like `Permission denied (publickey).` then you need to [follow the steps here](https://help.github.com/articles/generating-ssh-keys/).
+> 
+> You should also make sure that Git knows who you are. Enter the following commands in the *Terminal* app (using your actual name and email address associated with your GitHub account):
+> 
+>       git config --global user.name "Your Name"
+>       git config --global user.email "your.name@students.makeschool.com"
+> 
+> You can add additional emails to your GitHub account [here](https://github.com/settings/emails).
+
+<!-- Make School -->
+
+> [info]
+> 
+> Now that Git is all set up, we can clone the repository with the following command:
+> 
+>       git clone {clone SSH URL}
+> 
+> You can find the SSH clone URL on the right hand pane of the repository that was created for you. Make sure to use the SSH clone URL (not HTTPS). The complete command should look something like this:
+> 
+>       git clone git@github.com:MakeSchool-17/twitter-bot-python-username.git
 > 
 > Now that you have your repository cloned, you can use the `cd` command to change directories into the repository.
 > 
@@ -35,13 +64,13 @@ We'll be using *Classroom for GitHub* to manage assignments throughout the progr
 > 
 > You should get into the habit of *commiting* and *pushing* your code at the end of each page of this tutorial. You can do commit and push with the following commands:
 > 
->       git add -A
+>       git add --all
 >       git commit -m "{summary of changes}"
 >       git push origin master
 > 
 > This always has to be done from within the repository's directory so make sure to `cd` into it first if you have not already.
 > 
-> `git add -A` adds all the files to staging so they are ready to be saved. `git commit` commits the changes -- kind of like taking a snapshot. `{summary of changes}` should be a short summary of what the commit contains. Try to keep this under 50 characters in length. Finally, `git push origin master` *pushes* those the *commit* to GitHub. This saves backs up your changes online and allows the instructors to see your code.
+> `git add --all` adds all the files to staging so they are ready to be saved. `git commit` commits the changes -- kind of like taking a snapshot. `{summary of changes}` should be a short summary of what the commit contains. Try to keep this under 50 characters in length. Finally, `git push origin master` *pushes* those the *commit* to GitHub. This saves backs up your changes online and allows the instructors to see your code.
 > 
 > We'll go over all of this and more in a lecture so don't worry if it doesn't make sense yet. Just make sure to commit and push your changes regularly using the process above.
 
