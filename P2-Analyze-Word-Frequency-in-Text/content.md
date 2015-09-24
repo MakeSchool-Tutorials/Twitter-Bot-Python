@@ -70,8 +70,7 @@ Finished already? If you still have time left, make your code readable. Then opt
 - If you used a *dictionary* data structure in your program, rewrite it using only the *list* and *tuple* data structures. How fast can you make your read operations? (Hint: consider the benefits of sorting...)
 - Create an intermediate histogram file that can be easily read and converted to a histogram data structure in Python. It could just be a plain text file with words and counts separated by spaces, each on their own line, like this:
 
-
-  brilliant 6
-	dog 16
-	is 1106
-	the 5269
+		brilliant 6
+		dog 16
+		is 1106
+		the 5269
