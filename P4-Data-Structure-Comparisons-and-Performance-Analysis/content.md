@@ -72,16 +72,16 @@ This looks like a decent description of the algorithm for creating a histogram. 
 > [solution]
 >
 	def histogram(words):
-	    hgram = []                           # create a new list called hgram
-	    for word in words:                   # for each word in the list of words
-	        index = find(word, hgram)        # check if word is in hgram already
-	        if index == None:                # if word is not in histogram
-	            hgram.append((word, 1))      # add a new word-count pair to hgram
-	        else:                            # if word is already in hgram
-	            count = hgram[index][1]      # find its current count
+	    hgram = []							 # create a new list called hgram
+	    for word in words:					 # for each word in the list of words
+	        index = find(word, hgram)		 # check if word is in hgram already
+	        if index == None:				 # if word is not in histogram
+	            hgram.append((word, 1))		 # add a new word-count pair to hgram
+	        else:							 # if word is already in hgram
+	            count = hgram[index][1]		 # find its current count
 	            new_pair = (word, count + 1) # make a new word-count pair
-	            hgram[index] = new_pair      # replace word-count pair
-	    return hgram                         # return the hgram
+	            hgram[index] = new_pair		 # replace word-count pair
+	    return hgram						 # return the hgram
 
 Notice that in writing this `histogram()` function, we used a function that doesn't yet exist: `find()`. We could have included the steps here, but the implementation details of finding a word are not the responsibility of `histogram()`, so it is better to use a separate function. We already have some explicit expectations about how it should work: it will take a word and the histogram, and then return either the index of the matching word-count pair or `None` if the word does not exist in the histogram.
 
