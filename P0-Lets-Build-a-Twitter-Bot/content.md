@@ -11,6 +11,43 @@ So how do we make this? Well, not all at once. We're gonna do it in parts, step-
 Getting Started
 ==
 
+We'll be using *Classroom for GitHub* to manage assignments throughout the program. You'll need to:
+
+1. Go to the [assignment page](https://classroom.github.com/assignment-invitations/ee7800512cf80bc1faba6ef2bb229780)
+2. Accept the assignment and follow the link to the created repository
+3. Clone the repository and use it throughout this project.
+
+> [info]
+> 
+> Don't worry if you are not familiar with using Git and GitHub yet -- there will be an in-depth lecture soon. To clone the repository enter the following command into the *Terminal* app.
+> 
+>       git clone {clone URL}
+> 
+> You can find the clone URL on the right hand pane of the repository that was created for you. The complete command should look something like this:
+> 
+>       git clone https://github.com/MakeSchool-17/twitter-bot-python-username.git
+> 
+> Now that you have your repository cloned, you can use the `cd` command to change directories into the repository.
+> 
+>       cd twitter-bot-python-username
+> 
+> `twitter-bot-python-username` should match the directory that was created by `git clone` (it's the same as name of your repository).
+> 
+> You should get into the habit of *commiting* and *pushing* your code at the end of each page of this tutorial. You can do commit and push with the following commands:
+> 
+>       git add -A
+>       git commit -m "{summary of changes}"
+>       git push origin master
+> 
+> This always has to be done from within the repository's directory so make sure to `cd` into it first if you have not already.
+> 
+> `git add -A` adds all the files to staging so they are ready to be saved. `git commit` commits the changes -- kind of like taking a snapshot. `{summary of changes}` should be a short summary of what the commit contains. Try to keep this under 50 characters in length. Finally, `git push origin master` *pushes* those the *commit* to GitHub. This saves backs up your changes online and allows the instructors to see your code.
+> 
+> We'll go over all of this and more in a lecture so don't worry if it doesn't make sense yet. Just make sure to commit and push your changes regularly using the process above.
+
+Python Specs
+==
+
 Before you get going, there are two specifications (or *specs*, as they are commonly referred to) for this project:
 
 1.  Use **Python 3** (not Python 2).
