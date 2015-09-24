@@ -35,7 +35,7 @@ Here are some data structure options to choose from, in order of complexity/diff
 1. List of tuples (flat [associative array](https://en.wikipedia.org/wiki/Associative_array))
 2. Dictionary ([hash table](https://en.wikipedia.org/wiki/Hash_table))
 3. Sorted, [singly linked list](https://en.wikipedia.org/wiki/Linked_list#Singly_linked_lists)
-4. Doubly linked list (passociation list](https://en.wikipedia.org/wiki/Association_list))
+4. Doubly linked list ([association list](https://en.wikipedia.org/wiki/Association_list))
 5. [Binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree)
 6. [Radix tree](https://en.wikipedia.org/wiki/Radix_tree)
 7. * wild card - choose your own
