@@ -7,11 +7,16 @@ Now that our corpus has been tokenized, we're ready to start counting occurrence
 
 By simply counting tokens, we'll create a probability distribution that we can sample stochastically to generate a set of words that's representative of word usage frequency in our corpus. It won't be a grammatical sentence yet, but at least it's unlikely to contain rare words.
 
-We'll use a Python dictionary (aka hash table) here, although you should use your home-brewed hash table implementation.
+Since we already built our own fancy custom hash table, we'll use that to store our word counts.
 
-First, initialize an empty dictionary with `count = dict()`. Now iterate over all words in the tokenized corpus.
+First, initialize an empty hash table with `word_counts = HashTable()`. Now iterate over all words in the tokenized corpus.
 
-Given a string `word` as the loop variable, we need to check if this is the first time we've seen `word` or if we've seen it before. In the former case, we just set its `count` value to 1, while in the latter we *increment* its previous `count` by 1. Here's a concise way to do that in one line using the `dict.get(key, default)` method: `count[word] = count.get(word, 0) + 1`
+Given a string `word` as the loop variable, we need to check if this is the first time we've seen `word` or if we've seen it before. In the former case, we just set its `count` value to 1, while in the latter we *increment* its previous `count` by 1. Here's a snippet of code demonstrating this logic:
+
+  if word in word_counts:
+      word_counts[word] = word_counts[word] + 1
+  else:
+      word_counts[word] = 1
 
 We can compare the results of this word count dict with the Unix dictionary we used earlier the tutorial.
 
