@@ -7,7 +7,7 @@ Because modern computers are so fast, and the scripts we've been writing work wi
 
 However, in the real world, the world of production code, the amount of data can be orders of magnitude larger, and constraints on computation power and memory access may be more restrictive. The difference between two histogram-generating scripts, one which parses a source of 10,000 words in 0.1 seconds vs. one that parses a source of 10,000 words in 0.01 seconds, may not seem like a big difference now.
 
-But how will each of those scripts perform when given a source of 500,000 words? Will their execution time grow linearly, to 5 seconds and 0.5 seconds? That would mean an O(N) growth rate. Or will it grow exponentially, with an O(N^2) growth rate? That would take a lot longer.
+But how will each of those scripts perform when given a source of 500,000 words? Will their execution time grow linearly, to 5 seconds and 0.5 seconds? That would mean an O(N) growth rate. Or will it grow quadratically, with an O(N^2) growth rate? That would take a lot longer.
 
 When dealing with questions of performance, there are two ways to identify how much compute time a particular algorithm will need:
 
@@ -151,7 +151,7 @@ Let's start with the algorithm analysis to find the Big-O complexity of this fun
 
 > [info]
 >
-When doing algorithm analysis, we need to look for are all of the individual computations that make up a particular algorithm and determine which of them are constant time (also known as O(1)) (i.e. they will always take roughly the same amount of time to compute), which are linear time or O(n) (i.e. time to compute will increase by one time-unit with every additional data-unit added), and which are quadratic time or O(n^2) (i.e time to compute will increase exponentially, as the square of the number of data-units being computed). There are other kinds of complexities, but for now we'll just deal with these three.
+When doing algorithm analysis, we need to look for are all of the individual computations that make up a particular algorithm and determine which of them are constant time (also known as O(1)) (i.e. they will always take roughly the same amount of time to compute), which are linear time or O(n) (i.e. time to compute will increase by one time-unit with every additional data-unit added), and which are quadratic time or O(n^2) (i.e time to compute will increase quadratically, as the square of the number of data-units being computed). There are other kinds of complexities, but for now we'll just deal with these three.
 
 With that in mind, let's break up the `frequency()` function into its component computations and identify the Big-O complexity of each computation. Here's the function definition, with comments identifying the computations:
 
