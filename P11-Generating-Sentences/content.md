@@ -1,6 +1,6 @@
 ---
-title: Generating Sentences
-slug: generating-sentences
+title: Generating Sentences with Markov Chains
+slug: generating-sentences-with-markov-chains
 ---
 
 Markov Chains
