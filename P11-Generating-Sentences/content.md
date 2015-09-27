@@ -38,6 +38,8 @@ Make sure to think about what data structures to use to make your code efficient
 >
 When you're ready, try your implementation out on a real corpus and see how it compares to the stochastic sampler!
 
+<!-- html comment to break boxes -->
+
 > [info]
 >
 While writing and testing your random walk implementation you might come up against a couple of points we glossed over above.
