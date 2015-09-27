@@ -97,13 +97,19 @@ What we'd like to do is maintain a list of the previous *n* tokens in order, rem
 >
 Let's look at an example. We'll write the contents of the queue as a list, although the queue itself might not be implemented as one. When the queue is created, it is empty: `[]`. If we then enqueue `0`, `1`, and `2`, the queue will be `[0, 1, 2]`. Doing a dequeue, the first element that was enqueued will be removed, yielding `[1, 2]`. Finally, enqueuing `3` gives us `[1, 2, 3]`.
 
+<!-- html comment to break boxes -->
+
 > [action]
 >
 Implement a queue supporting the operations above. Enqueuing and dequeing should take constant time, and iteration should take constant time per item. Make sure your implementation works correctly if someone tries to dequeue an item from an empty queue: it should throw an exception that explains the problem.
 
+<!-- html comment to break boxes -->
+
 > [info]
 >
 Ordinary queues don't place restrictions on how many items they can store - they can grow or shrink as needed. However, notice that in the case of Markov chains, we know ahead of time that we'll never need to store more than *n* items in the queue. This means we can use a simpler data structure called a *circular buffer* (or *ring buffer*). Circular buffers are created with a fixed size - once they fill up, any further additions will overwrite values in the buffer, starting with the oldest. If you're interested, try implementing a circular buffer without using linked lists.
+
+<!-- html comment to break boxes -->
 
 > [action]
 >
