@@ -15,10 +15,10 @@ First, initialize an empty hash table with `word_counts = HashTable()`. Now iter
 
 Given a string `word` as the loop variable, we need to check if this is the first time we've seen `word` or if we've seen it before. In the former case, we just set its `count` value to 1, while in the latter we *increment* its previous `count` by 1. Here's a snippet of code demonstrating this logic:
 
-  if word in word_counts:
-      word_counts[word] = word_counts[word] + 1
-  else:
-      word_counts[word] = 1
+    if word in word_counts:
+        word_counts[word] = word_counts[word] + 1
+    else:
+        word_counts[word] = 1
 
 We can compare the results of this word count dict with the Unix dictionary we used earlier the tutorial.
 
@@ -60,18 +60,18 @@ Once you have a heap, you can add word-count data to populate it, and know that 
 
 Here's an example interface for a heap in Python:
 
-  from heap import Heap
+    from heap import Heap
 
-  counts = Heap()             # create a new heap
-  counts.insert((3, "the"))   # insert some tuples of count/word pairs
-  counts.insert((2, "dog"))
-  counts.insert((1, "apple"))
-  counts.insert((5, "red"))
-  counts.insert((1, "ate"))
+    counts = Heap()             # create a new heap
+    counts.insert((3, "the"))   # insert some tuples of count/word pairs
+    counts.insert((2, "dog"))
+    counts.insert((1, "apple"))
+    counts.insert((5, "red"))
+    counts.insert((1, "ate"))
 
-  counts.peek()               # => (5, "red")
-  counts.delete_max()         # => (5, "red")
-  counts.peek()               # => (3, "the")
+    counts.peek()               # => (5, "red")
+    counts.delete_max()         # => (5, "red")
+    counts.peek()               # => (3, "the")
 
 Notice that the `delete_max()` method above is destructive: it modifies the heap in place.
 
@@ -86,11 +86,11 @@ Heaps are actually quite simple, but it can be a little tricky to see how to imp
 
 Here is a binary heap of the values 9, 4, 7, 3, 1, and 6, prioritized by maximum value:
 
-          (9)
-      +----+----+
-     (4)       (7)
-   +--+--+   +--+
-  (3)   (1) (6)
+    root -> (9)
+        +----+----+
+       (4)       (7)
+     +--+--+   +--+
+    (3)   (1) (6)
 
 Take note of a few things about this heap: each child node is _less than_ its parent, and each node has no more than 2 children. The leaf nodes are all on the bottom, and filled out from left to right.
 
@@ -104,21 +104,21 @@ Then, let's explore possible implementations of a heap. We could go with a list 
 
 To demonstrate, here is the heap from above as a list:
 
-  [9,4,7,3,1,6]
+    [9,4,7,3,1,6]
 
 In this structure, you can find the parent or child nodes for any given node by using its index. To find the parent, simply subtract one from the index and divide by 2:
 
-  # index for parent of node 1 (index 4)
-  (4 - 1) // 2
-  # => 1
+    # index for parent of node 1 (index 4)
+    (4 - 1) // 2
+    # => 1
 
 Index 1 (element with value 4) is indeed the parent node. To find the child nodes, multiply the index by 2 and add 1 (to find the left child) and 2 (to find the right child):
 
-  # indices for children of node 7 (index 2)
-  (2 * 2) + 1
-  # => 5
-  (2 * 2) + 2
-  # => 6
+    # indices for children of node 7 (index 2)
+    (2 * 2) + 1
+    # => 5
+    (2 * 2) + 2
+    # => 6
 
 5 is the index of node 7's left child (node 6), but the index 6 is out of bounds, i.e. node 7 doesn't have a right child. Make sure to account for that case in your code.
 
@@ -128,58 +128,58 @@ For a more detailed description, this [article shows a binary heap implementatio
 
 > [solution]
 >
-  class MaxHeap():
-      def __init__(self):
-          self.list = [None] # Add null object to make tree arithmetic simpler
-          self.size = 0
+    class MaxHeap():
+        def __init__(self):
+            self.list = [None] # Add null object to make tree arithmetic simpler
+            self.size = 0
 >
-      def peek(self, n):
-          # look at first n nodes of heap
-          return self.list[1:n+1]
+        def peek(self, n):
+            # look at first n nodes of heap
+            return self.list[1:n+1]
 >
-      def insert(self, node):
-          # push item onto heap
-          self.list.append(node)
-          self.size += 1
-          self.sift_up(self.size)
+        def insert(self, node):
+            # push item onto heap
+            self.list.append(node)
+            self.size += 1
+            self.sift_up(self.size)
 >
-      def delete_max(self):
-          # remove the root and restructure heap
-          key = self.list[1]
-          self.list[1] = self.list.pop()
-          self.size -= 1
-          self.sift_down(1)
-          return key
+        def delete_max(self):
+            # remove the root and restructure heap
+            key = self.list[1]
+            self.list[1] = self.list.pop()
+            self.size -= 1
+            self.sift_down(1)
+            return key
 >
-      def sift_down(self, idx):
-          while idx * 2 <= self.size:
-              key = self.list[idx]
-              max_child_idx = self.max_child(idx)
-              max_child = self.list[max_child_idx]
-              if max_child > key:
-                  self.swap(idx, max_child_idx)
-              idx = max_child_idx
+        def sift_down(self, idx):
+            while idx * 2 <= self.size:
+                key = self.list[idx]
+                max_child_idx = self.max_child(idx)
+                max_child = self.list[max_child_idx]
+                if max_child > key:
+                    self.swap(idx, max_child_idx)
+                idx = max_child_idx
 >
-      def sift_up(self, idx):
-          while idx // 2 > 0:
-              key = self.list[idx]
-              parent_idx = idx // 2
-              parent_key = self.list[parent_idx]
-              if key > parent_key:
-                  self.swap(idx, parent_idx)
-              idx = parent_idx
+        def sift_up(self, idx):
+            while idx // 2 > 0:
+                key = self.list[idx]
+                parent_idx = idx // 2
+                parent_key = self.list[parent_idx]
+                if key > parent_key:
+                    self.swap(idx, parent_idx)
+                idx = parent_idx
 >
-      def max_child(self, idx):
-          l_idx = idx * 2
-          r_idx = idx * 2 + 1
-          if r_idx > self.size:
-              return l_idx
-          if self.list[r_idx] > self.list[l_idx]:
-              return r_idx
-          else:
-              return l_idx
+        def max_child(self, idx):
+            l_idx = idx * 2
+            r_idx = idx * 2 + 1
+            if r_idx > self.size:
+                return l_idx
+            if self.list[r_idx] > self.list[l_idx]:
+                return r_idx
+            else:
+                return l_idx
 >
-      def swap(self, idx_a, idx_b):
-          key = self.list[idx_a]
-          self.list[idx_a] = self.list[idx_b]
-          self.list[idx_b] = key
+        def swap(self, idx_a, idx_b):
+            key = self.list[idx_a]
+            self.list[idx_a] = self.list[idx_b]
+            self.list[idx_b] = key
