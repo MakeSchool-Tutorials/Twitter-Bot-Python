@@ -75,6 +75,8 @@ Here's an example interface for a heap in Python:
 
 Notice that the `delete_max()` method above is destructive: it modifies the heap in place.
 
+> [action]
+>
 When you're finished implementing your heap, add it to your project as a separate module and provide a simple interface for finding the `n` most common words in a given corpus.
 
 Help! I'm in a Heap of Trouble
@@ -100,7 +102,7 @@ This flexibility allows heaps to be very efficient, but it means that you can't 
 
 Keep that fact in mind when working with heaps.
 
-Then, let's explore possible implementations of a heap. We could go with a list of node objects that point to two (optional) children. But there is another nifty way to store a binary heap as a flat, ordered list.
+Then, let's explore possible implementations of a heap. We could go with a list of node objects that point to two (optional) children. But there is another nifty way to store a binary heap: as a flat, ordered list.
 
 To demonstrate, here is the heap from above as a list:
 
@@ -125,6 +127,8 @@ Index 1 (element with value 4) is indeed the parent node. To find the child node
 With that simple arithmetic, we can store a binary heap in a good old Python list. Hurrah!
 
 For a more detailed description, this [article shows a binary heap implementation in Python](http://interactivepython.org/runestone/static/pythonds/Trees/BinaryHeapImplementation.html). If you choose to use it please don't waste your own learning by copy-pasting the code. Make sure you internalize and understand the concept before writing your own implementation.
+
+The same goes for the example solution shown below: read and study, don't copy blindly!
 
 > [solution]
 >
