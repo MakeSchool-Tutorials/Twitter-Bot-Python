@@ -103,7 +103,7 @@ Push to Heroku
 ==
 Now that we've got a working development version of our app, it's time to put it on the world wide web. We're going to use [Heroku](https://www.heroku.com/), a popular PaaS, or Platform-as-a-Service, to host our deployed web app.
 
-Luckily for us, Heroku has a great guide on getting started with Python apps. Follow this guide to prepare and deploy your app. You don't need to follow all of the steps. The most essential pieces you'll need are:
+Luckily for us, Heroku has a great [guide on getting started with Python apps](https://devcenter.heroku.com/articles/getting-started-with-python#introduction). Follow this guide to prepare and deploy your app. You don't need to follow all of the steps. The most essential pieces you'll need are:
 
 - A local [Git](https://git-scm.com/) repository for your source code
 - A [Heroku account](https://signup.heroku.com/www-home-top)
